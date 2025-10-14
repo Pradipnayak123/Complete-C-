@@ -1,11 +1,9 @@
 #include <stdio.h>
-float average(float a, float b,float c);
 
-float average(float a, float b,float c){
-return(a+b+c)/3;
-}
-float main(){
-    float a = 2.0 ,b = 4.0 , c= 5.0;
-    printf("The Average of a, b and c is %f",average(a,b,c));
+int main(){
+    int i = 2;
+    int *ptr = &i;
+    printf("The adress of i is %u\n",&i);
+    printf("The Value  of i is %d\n",*ptr);
     return 0;
 }

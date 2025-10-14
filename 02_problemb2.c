@@ -1,10 +1,15 @@
 #include <stdio.h>
-float c2f(float);
-float c2f(float c){
-   return ((9*c)/5) +32; 
+
+int returning_5(int *ptr){
+printf("The Value Of ptr is %d\n", ptr);
+printf("The Value at ptr is %d\n", *ptr);
+return 5;
 }
-int main(){
-    float c = 45;
-    printf("Celsius to Fahrenheit for  %f is %.3f",c,c2f(c));
+int main()
+{
+    int i = 2;
+    int *ptr = &i;
+    printf("The address of i is %u\n", &i);
+    returning_5(ptr);
     return 0;
 }
