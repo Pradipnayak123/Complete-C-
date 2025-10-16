@@ -1,13 +1,20 @@
 #include <stdio.h>
 
-void change_to_ten_times(int );
-void change_to_ten_times(int a){
-    a = a * 10;
+int count (int a[],int n){
+    int no_of_positive = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if(a[i]>0){
+            no_of_positive++;
+        }
+    }
+    return no_of_positive;
+    
 }
+
 int main(){
-    int x = 23;
-    printf("The Value of x is %d\n",x);
-    change_to_ten_times(x);
-    printf("The value of x is %d\n",x);
+    int a[] = {1,2,-3,4,5,-6,7,8,-9,10};
+    printf("The no of Positive Integer is %d \n",count(a, 10));
+    
     return 0;
 }

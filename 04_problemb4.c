@@ -1,14 +1,18 @@
 #include <stdio.h>
 
-int pass(int* );
-int pass(int *a){
-    *a = 9;
-    return *a;
-}
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    int arr[10];
+    for (int i = 0; i < 10; i++)
+    {
+        arr[i] = n * (i + 1);
+    }
+    for (int i = 0; i < 10; i++)
+    {
+        printf("The Value of %d X %d = %d\n", n,i + 1, arr[i]);
+    }
 
-int main(){
-    int x = 2;
-    pass(&x);
-    printf("The Value of x is %d\n",x);
     return 0;
 }

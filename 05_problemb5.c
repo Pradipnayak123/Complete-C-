@@ -1,20 +1,31 @@
 #include <stdio.h>
 
-int avg(int, int);
-int avg(int a, int b)
+void printArray(int a[], int n)
 {
-    return (a + b) / 2.0;
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", a[i]);
+    }
+    printf("\n");
 }
-int sum(int, int);
-int sum(int x, int y)
+void reverse(int arr[], int n)
 {
-    // printf("The sum is %d",x,y);
-    return x + y;
+    // For i From 0 to n/2;
+    // arr[i] = arr[n-i-1];
+    int tamp;
+    for (int i = 0; i < n / 2; i++)
+    {
+        tamp = arr[i];
+        arr[i] = arr[n - i - 1];
+        arr[n - i - 1] = tamp;
+    }
 }
+
 int main()
 {
-    int a = 4, b = 6;
-    printf("The sum of a and b is %d\n", sum(a, b));
-    printf("The Average of a and b is %d\n", avg(a, b));
+    int arr[] = {1, 2, 3, 4, 5, 6};
+    printArray(arr, 6);
+    reverse(arr , 6);
+    printArray(arr, 6);
     return 0;
 }

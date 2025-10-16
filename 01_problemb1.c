@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-int main(){
-    int i = 2;
-    int *ptr = &i;
-    printf("The adress of i is %u\n",&i);
-    printf("The Value  of i is %d\n",*ptr);
+int main()
+{
+    int a[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int *ptr = a;
+    printf("The Value at address %u is %d ", ptr + 2, *(ptr+2));
     return 0;
 }
